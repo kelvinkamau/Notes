@@ -27,7 +27,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/productsansregular"
             android:textColorHint="@color/hint_text"
-            android:textSize="@dimen/medium_text"
+            android:textSize="@dimen/title_text"
             android:textColor="@color/main_text"
             android:hint="@string/title"/>
 
