@@ -1,0 +1,2 @@
+-keep class app.kelvinkamau.notes.adapter.** { *; }
+-keep class app.kelvinkamau.notes.model.** { *; }
