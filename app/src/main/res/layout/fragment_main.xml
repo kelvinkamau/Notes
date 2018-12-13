@@ -61,7 +61,6 @@
         android:layout_height="@dimen/fab"
         android:elevation="4dp"
         android:scaleType="center"
-        app:layout_anchor="@+id/recyclerView"
         app:layout_anchorGravity="bottom|end"
         android:clickable="true"
         android:background="?attr/fabColor"
@@ -71,7 +70,6 @@
         android:layout_marginRight="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        app:layout_behavior="app.kelvinkamau.notes.inner.FabBehavior"
-        tools:ignore="MissingPrefix,UnusedAttribute"/>
+        app:layout_behavior="app.kelvinkamau.notes.inner.FabBehavior"/>
 
 </android.support.design.widget.CoordinatorLayout>
