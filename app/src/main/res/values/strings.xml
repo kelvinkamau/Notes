@@ -46,5 +46,16 @@
     <string name="data_restored">Back data were successfully restored.</string>
     <string name="restore_error">Restore error</string>
     <string name="not_implemented">This section has not been implemented for the beta version.</string>
-    <string name="about_desc">A simple note taking app \nBuilt by TechYardHQ</string>
+    <string name="about_desc"><TT>An elegant and hassle free way to create notes and categorize them.
+        </TT>\n\n
+    <b><BIG>Built by Kelvin Kamau.</BIG></b>\n
+        ================================\n
+        <b><BIG>Get other apps by developer</BIG>
+        </b>\n
+        <TT><b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.reminders">Reminders</a></BIG></b>\n
+         <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pingpong">PingPong</a></BIG></b>\n
+         <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pace2d">Pace2D</a></BIG></b>
+        </TT>
+
+</string>
 </resources>
