@@ -45,12 +45,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/main_text"
+            android:fontFamily="@font/productsansregular"
             android:textSize="@dimen/medium_text"/>
 
         <TextView
             android:id="@+id/date_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/productsansregular"
             android:textColor="@color/hint_text"
             android:maxLines="1"
             android:layout_marginTop="3dp"
