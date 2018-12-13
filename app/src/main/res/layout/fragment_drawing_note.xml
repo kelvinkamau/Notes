@@ -25,6 +25,7 @@
             android:id="@+id/title_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/productsansregular"
             android:textColorHint="@color/hint_text"
             android:textSize="@dimen/medium_text"
             android:textColor="@color/main_text"
@@ -44,6 +45,7 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_marginEnd="10dp"
+            android:fontFamily="@font/productsansregular"
             android:text="@string/start_drawing"/>
 
         <ImageView

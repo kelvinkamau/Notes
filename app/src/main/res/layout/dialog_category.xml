@@ -22,6 +22,7 @@
         <EditText
             android:id="@+id/title_txt"
             android:layout_width="match_parent"
+            android:fontFamily="@font/productsansregular"
             android:layout_height="wrap_content"
             android:textColorHint="@color/hint_text"
             android:textSize="@dimen/medium_text"
@@ -35,6 +36,7 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/small_text"
         android:text="@string/choose_a_color"
+        android:fontFamily="@font/productsansregular"
         android:textColor="@color/secondary_text"
         android:layout_marginBottom="8dp"
         android:layout_marginTop="16dp"/>

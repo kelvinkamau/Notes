@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:textSize="@dimen/smaller_text"
+        android:fontFamily="@font/productsansregular"
         android:textColor="@color/main_text"
         android:layout_marginLeft="72dp"
         android:layout_marginStart="72dp"

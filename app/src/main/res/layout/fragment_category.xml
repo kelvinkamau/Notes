@@ -38,6 +38,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:textSize="@dimen/medium_text"
+            android:fontFamily="@font/productsansregular"
             android:layout_marginTop="16dp"
             android:text="@string/no_notes"/>
 
@@ -46,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:gravity="center"
+            android:fontFamily="@font/productsansregular"
             android:layout_marginLeft="16dp"
             android:layout_marginStart="16dp"
             android:layout_marginRight="16dp"

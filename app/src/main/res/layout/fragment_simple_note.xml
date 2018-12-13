@@ -25,6 +25,7 @@
             android:id="@+id/title_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/productsansregular"
             android:textColorHint="@color/hint_text"
             android:textSize="@dimen/medium_text"
             android:textColor="@color/main_text"
