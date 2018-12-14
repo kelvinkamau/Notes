@@ -5,6 +5,12 @@ Notes
 ## Features
 
 - Create categories with different theme colors
-- Take simple notes and make text bold or italicized
+- Take notes & stylize them with **bold**, <s>strikethrough</s>, <i>italics</i>, <u>underline</u>, add bullets
 - Take drawing notes
 - Backup and restore notes
+
+<img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/one.png"/> &nbsp;
+<img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/two.png"/> &nbsp;
+<img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/three.png"/> &nbsp;
+<img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/four.png"/>
+
