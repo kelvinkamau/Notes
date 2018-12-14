@@ -3,6 +3,8 @@
     <string name="menu">メニュー</string>
     <string name="settings">設定</string>
     <string name="about">アプリについて</string>
+    <string name="exit">Exit</string>
+    <string name="notes_categories">Notes categories</string>
     <string name="exit_message">もう一度押すと終了します</string>
     <string name="new_category">新しいカテゴリー</string>
     <string name="empty">空</string>

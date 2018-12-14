@@ -92,27 +92,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
             checkForPermission = false;
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 requestPermission();
-				/*new MaterialDialog.Builder(this)
-					.title(R.string.permission)
-					.content(R.string.storage_permission)
-					.positiveText(R.string.request)
-					.negativeText(R.string.cancel)
-					.negativeColor(ContextCompat.getColor(this, R.color.secondary_text))
-					.onPositive(new MaterialDialog.SingleButtonCallback() {
-						@Override
-						public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-							dialog.dismiss();
-							requestPermission();
-						}
-					})
-					.onNegative(new MaterialDialog.SingleButtonCallback() {
-						@Override
-						public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-							dialog.dismiss();
-							displayPermissionError();
-						}
-					})
-					.show();*/
             }
         }
     }
@@ -195,19 +174,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                         @Override
                         public void run() {
                             switch (type) {
-                                /*case Drawer.TYPE_ABOUT:
-                                    new MaterialDialog.Builder(MainActivity.this)
-                                            .title(R.string.app_name)
-                                            .content(R.string.about_desc)
-                                            .positiveText(R.string.ok)
-                                            .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                                @Override
-                                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                                    dialog.dismiss();
-                                                }
-                                            })
-                                            .show();
-                                    break;*/
                                 case Drawer.TYPE_BACKUP:
                                     backupData();
                                     break;

@@ -5,6 +5,8 @@
     <string name="about_desc">Notas tomadas desde una App</string>
     <string name="back">Regresar</string>
     <string name="backup">Respaldar datos</string>
+    <string name="exit">Exit</string>
+    <string name="notes_categories">Notes categories</string>
     <string name="backup_error">Respaldar error</string>
     <string name="backup_saved">Respaldo de datos guardado en %1$s</string>
     <string name="cancel">Cancelar</string>

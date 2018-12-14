@@ -3,6 +3,8 @@
     <string name="menu">Menü</string>
     <string name="settings">Einstellungen</string>
     <string name="about">Über Notes</string>
+    <string name="exit">Exit</string>
+    <string name="notes_categories">Notes categories</string>
     <string name="exit_message">Zum Verlassen erneut drücken</string>
     <string name="new_category">Neue Kategorie</string>
     <string name="empty">Leer</string>

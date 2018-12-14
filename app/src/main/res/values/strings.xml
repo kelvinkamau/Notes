@@ -3,6 +3,8 @@
     <string name="menu">menu</string>
     <string name="settings">Notes App v1.0.1</string>
     <string name="about">About</string>
+    <string name="exit">Exit</string>
+    <string name="notes_categories">Notes categories</string>
     <string name="exit_message">Press again to exit</string>
     <string name="new_category">New category</string>
     <string name="empty">empty</string>

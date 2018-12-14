@@ -39,7 +39,7 @@
                 android:layout_marginLeft="16dp"
                 android:maxLines="1"
                 android:fontFamily="@font/productsansregular"
-                android:text="@string/app_name"
+                android:text="@string/notes_categories"
                 android:textColor="@color/white"
                 android:textSize="@dimen/large_text" />
         </android.support.v7.widget.Toolbar>

@@ -41,7 +41,7 @@ public class SimpleNoteFragment extends NoteFragment {
     public void init(View view) {
         body = (RichEditor) view.findViewById(R.id.editor);
         body.setPlaceholder("Start typing here");
-        body.setEditorBackgroundColor(ContextCompat.getColor(getContext(), R.color.bg));
+        body.setEditorBackgroundColor(ContextCompat.getColor(getContext(), R.color.ripple_dark));
 
         view.findViewById(R.id.action_bold).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +78,6 @@ public class SimpleNoteFragment extends NoteFragment {
 
             }
         });
-
 
         body.setHtml(note.body);
     }
