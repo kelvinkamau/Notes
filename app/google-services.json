@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "402477203799",
+    "firebase_url": "https://notesbykev.firebaseio.com",
+    "project_id": "notesbykev",
+    "storage_bucket": "notesbykev.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402477203799:android:eff5da7ae275ef6d",
+        "android_client_info": {
+          "package_name": "app.kelvinkamau.notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402477203799-e5gkp7stf375t8uv3tvdmoai9qdluc59.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.kelvinkamau.notes",
+            "certificate_hash": "46e2a86626b1a68e4bd8e33d8726730667226784"
+          }
+        },
+        {
+          "client_id": "402477203799-ne0hs5cglm9rkcisd936d4qva0gaeqj1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7sY84xzjmdufjWZ77DPsMhmD7iodgEaM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "402477203799-ne0hs5cglm9rkcisd936d4qva0gaeqj1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

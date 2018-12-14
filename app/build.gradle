@@ -29,7 +29,12 @@ dependencies {
     implementation 'com.afollestad.material-dialogs:core:0.9.4.7'
     implementation 'jp.wasabeef:richeditor-android:1.2.0'
 
+    implementation 'com.google.firebase:firebase-core:16.0.6'
+
+    implementation 'com.google.firebase:firebase-appindexing:17.1.0'
     configurations.all {
         exclude group: 'com.android.support', module: 'support-v13'
     }
 }
+
+apply plugin: 'com.google.gms.google-services'
