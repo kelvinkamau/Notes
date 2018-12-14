@@ -13,7 +13,7 @@ import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.model.Drawer;
 
 public class DrawerAdapter extends BaseAdapter {
-    private static final int LENGTH = 4;
+    private static final int LENGTH = 3;
 
     private Context context;
     private ClickListener listener;
@@ -44,11 +44,11 @@ public class DrawerAdapter extends BaseAdapter {
 
         drawers[++counter] = Drawer.divider();
 
-        drawers[++counter] = new Drawer(
+       /* drawers[++counter] = new Drawer(
                 Drawer.TYPE_ABOUT,
                 R.drawable.drawer_about,
                 R.string.about
-        );
+        );*/
     }
 
     @Override

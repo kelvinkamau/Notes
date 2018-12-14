@@ -7,14 +7,14 @@
     <string name="new_category">New category</string>
     <string name="empty">empty</string>
     <string name="no_categories">Start by adding a category</string>
-    <string name="no_notes">No notes found!</string>
-    <string name="no_categories_desc">Create a new category by clicking the add folder\n button below</string>
+    <string name="no_notes">No notes here</string>
+    <string name="no_categories_desc">Create a new category by clicking the add a category\n button below</string>
     <string name="no_notes_desc">Start taking notes by clicking the add note\n button below</string>
     <string name="no_notes_hint">Click me to add notes</string>
     <string name="one_note">1 note</string>
     <string name="counter_note">%1$d notes</string>
     <string name="title">Title</string>
-    <string name="choose_a_color">Choose a color:</string>
+    <string name="choose_a_color">Select a color:</string>
     <string name="create">Create</string>
     <string name="cancel">Cancel</string>
     <string name="theme">theme</string>
@@ -43,15 +43,14 @@
     <string name="no_mounted_sd">No SD-Card was found</string>
     <string name="backup_saved">Backup data were saved at %1$s</string>
     <string name="backup_error">Backup error</string>
-    <string name="data_restored">Back data were successfully restored.</string>
+    <string name="data_restored">Backed up notes were successfully restored.</string>
     <string name="restore_error">Restore error</string>
     <string name="not_implemented">This section has not been implemented for the beta version.</string>
     <string name="about_desc"><TT>An elegant and hassle free way to create notes and categorize them.
         </TT>\n\n
-    <b><BIG>Built by Kelvin Kamau.</BIG></b>\n
+    <b><BIG>App by Kelvin Kamau.</BIG></b>\n
         ================================\n
-        <b><BIG>Get other apps by developer</BIG>
-        </b>\n
+        <b><i><BIG>Get other apps by developer</BIG></i></b>\n
         <TT><b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.reminders">Reminders</a></BIG></b>\n
          <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pingpong">PingPong</a></BIG></b>\n
          <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pace2d">Pace2D</a></BIG></b>

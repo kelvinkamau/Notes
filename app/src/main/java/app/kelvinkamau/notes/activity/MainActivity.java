@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                         @Override
                         public void run() {
                             switch (type) {
-                                case Drawer.TYPE_ABOUT:
+                                /*case Drawer.TYPE_ABOUT:
                                     new MaterialDialog.Builder(MainActivity.this)
                                             .title(R.string.app_name)
                                             .content(R.string.about_desc)
@@ -207,7 +207,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                                                 }
                                             })
                                             .show();
-                                    break;
+                                    break;*/
                                 case Drawer.TYPE_BACKUP:
                                     backupData();
                                     break;
@@ -217,8 +217,8 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                                 case Drawer.TYPE_SETTINGS:
                                     // TODO implement settings
                                     new MaterialDialog.Builder(MainActivity.this)
-                                            .title(R.string.settings)
-                                            .content(R.string.not_implemented)
+                                            .title(R.string.app_name)
+                                            .content(R.string.about_desc)
                                             .positiveText(R.string.ok)
                                             .onPositive(new MaterialDialog.SingleButtonCallback() {
                                                 @Override
@@ -325,7 +325,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
     private void backupData() {
         SaveDialog.newInstance(
                 R.string.backup,
-                "memento",
+                "mynotes",
                 App.BACKUP_EXTENSION,
                 new SaveDialog.SaveListener() {
                     @Override
