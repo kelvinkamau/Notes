@@ -40,7 +40,7 @@ public class SimpleNoteFragment extends NoteFragment {
     @Override
     public void init(View view) {
         body = (RichEditor) view.findViewById(R.id.editor);
-        body.setPlaceholder("Start typing here");
+        body.setPlaceholder("Type notes here");
         body.setEditorBackgroundColor(ContextCompat.getColor(getContext(), R.color.ripple_dark));
 
         view.findViewById(R.id.action_bold).setOnClickListener(new View.OnClickListener() {
@@ -68,17 +68,33 @@ public class SimpleNoteFragment extends NoteFragment {
             @Override
             public void onClick(View v) {
                 body.setStrikeThrough();
-
             }
         });
         view.findViewById(R.id.action_bullets).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 body.setBullets();
-
             }
         });
 
+        view.findViewById(R.id.action_superscript).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                body.setSuperscript();
+            }
+        });
+        view.findViewById(R.id.action_subscript).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                body.setSubscript();
+            }
+        });
+        view.findViewById(R.id.action_undo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                body.undo();
+            }
+        });
         body.setHtml(note.body);
     }
 }

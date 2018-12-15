@@ -6,23 +6,29 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-
-    <EditText
-        android:id="@+id/title_txt"
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/text_input_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12sp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12sp"
-        android:background="@android:color/transparent"
-        android:focusable="true"
-        android:fontFamily="@font/productsansregular"
-        android:hint="@string/title"
-        android:padding="8sp"
-        android:textColor="@color/black"
-        android:textColorHint="@color/hint_text"
-        android:textSize="@dimen/title_text"
-        android:textStyle="bold" />
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/title_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12sp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="12sp"
+            android:background="@android:color/transparent"
+            android:focusable="true"
+            android:fontFamily="@font/productsansregular"
+            android:lineHeight="50dp"
+            android:maxLines="2"
+            android:padding="8sp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/hint_text"
+            android:textSize="@dimen/title_text"
+            android:textStyle="bold" />
+    </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,84 +48,136 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="62dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="62sp"
         android:fontFamily="@font/productsansregular"
         android:gravity="bottom"
         android:textSize="@dimen/title_text" />
 
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="@color/white"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
 
 
-        <ImageView
-            android:id="@+id/action_bold"
-            android:layout_width="@dimen/tool_size"
-            android:layout_height="@dimen/tool_size"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/tool"
-            android:scaleType="center"
-            app:srcCompat="@drawable/ic_bold"
-            tools:ignore="KeyboardInaccessibleWidget" />
+            <ImageView
+                android:id="@+id/action_undo"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_undo"
+                tools:ignore="KeyboardInaccessibleWidget" />
 
-        <ImageView
-            android:id="@+id/action_italic"
-            android:layout_width="@dimen/tool_size"
-            android:layout_height="@dimen/tool_size"
-            android:layout_marginStart="5dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/tool"
-            android:scaleType="center"
-            app:srcCompat="@drawable/ic_italic"
-            tools:ignore="KeyboardInaccessibleWidget" />
+            <ImageView
+                android:id="@+id/action_bold"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_bold"
+                tools:ignore="KeyboardInaccessibleWidget" />
 
-        <ImageView
-            android:id="@+id/action_underline"
-            android:layout_width="@dimen/tool_size"
-            android:layout_height="@dimen/tool_size"
-            android:layout_marginStart="5dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/tool"
-            android:scaleType="center"
-            app:srcCompat="@drawable/ic_underline"
-            tools:ignore="KeyboardInaccessibleWidget" />
+            <ImageView
+                android:id="@+id/action_italic"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:layout_marginStart="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_italic"
+                tools:ignore="KeyboardInaccessibleWidget" />
 
-        <ImageView
-            android:id="@+id/action_strike"
-            android:layout_width="@dimen/tool_size"
-            android:layout_height="@dimen/tool_size"
-            android:layout_marginStart="5dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/tool"
-            android:scaleType="center"
-            app:srcCompat="@drawable/ic_strike"
-            tools:ignore="KeyboardInaccessibleWidget" />
+            <ImageView
+                android:id="@+id/action_underline"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:layout_marginStart="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_underline"
+                tools:ignore="KeyboardInaccessibleWidget" />
 
-        <ImageView
-            android:id="@+id/action_bullets"
-            android:layout_width="@dimen/tool_size"
-            android:layout_height="@dimen/tool_size"
-            android:layout_marginStart="5dp"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/tool"
-            android:scaleType="center"
-            app:srcCompat="@drawable/ic_bullets"
-            tools:ignore="KeyboardInaccessibleWidget" />
+            <ImageView
+                android:id="@+id/action_strike"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:layout_marginStart="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_strike"
+                tools:ignore="KeyboardInaccessibleWidget" />
 
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/action_bullets"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:layout_marginStart="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_bullets"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+            <ImageView
+                android:id="@+id/action_superscript"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:layout_marginStart="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_superscript"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+            <ImageView
+                android:id="@+id/action_subscript"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:layout_marginStart="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_subscript"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+            <ImageView
+                android:id="@+id/action_redo"
+                android:layout_width="@dimen/tool_size"
+                android:layout_height="@dimen/tool_size"
+                android:layout_marginStart="5dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/tool"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_redo"
+                tools:ignore="KeyboardInaccessibleWidget" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
 
 </android.support.design.widget.CoordinatorLayout>
