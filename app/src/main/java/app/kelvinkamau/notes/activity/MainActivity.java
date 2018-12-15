@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         setContentView(R.layout.activity_main);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        toolbar =  findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         try {
@@ -126,9 +126,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         // Set date in drawer
         ((TextView) findViewById(R.id.drawer_date)).setText(Formatter.formatDate());
 
-        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout =  findViewById(R.id.drawer_layout);
         drawerHolder = findViewById(R.id.drawer_holder);
-        ListView drawerList = (ListView) findViewById(R.id.drawer_list);
+        ListView drawerList = findViewById(R.id.drawer_list);
 
         // Navigation menu button
         findViewById(R.id.nav_btn).setOnClickListener(new View.OnClickListener() {
