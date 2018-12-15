@@ -48,7 +48,7 @@ public class DrawingNoteFragment extends NoteFragment {
             @Override
             public void onClick(View view) {
                 canvas.setMode(CanvasView.Mode.DRAW);
-                canvas.setPaintStrokeWidth(3F);
+                canvas.setPaintStrokeWidth(5F);
             }
         });
 

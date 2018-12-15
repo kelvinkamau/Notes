@@ -1,82 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/bg"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/title_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12sp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12sp"
+        android:background="@android:color/transparent"
         android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:layout_width="0px"
-        android:layout_height="0px"
-        tools:ignore="UselessLeaf" />
+        android:fontFamily="@font/productsansregular"
+        android:hint="@string/title"
+        android:lineHeight="50dp"
+        android:maxLines="2"
+        android:padding="8sp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/hint_text"
+        android:textSize="@dimen/title_text"
+        android:textStyle="bold" />
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/text_input_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/title_txt"
+        <com.android.graphics.CanvasView
+            android:id="@+id/canvas"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/productsansregular"
-            android:textColorHint="@color/hint_text"
-            android:textSize="@dimen/title_text"
-            android:textColor="@color/main_text"
-            android:hint="@string/title"/>
-
-    </android.support.design.widget.TextInputLayout>
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="55sp"/>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_marginTop="10dp"
-        android:gravity="center_vertical"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            android:fontFamily="@font/productsansregular"
-            android:text="@string/start_drawing"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
 
         <ImageView
             android:id="@+id/pen_tool"
             android:layout_width="@dimen/tool_size"
             android:layout_height="@dimen/tool_size"
-            android:scaleType="center"
+            android:background="?selectableItemBackgroundBorderless"
             android:clickable="true"
-            android:background="@drawable/tool"
+            android:contentDescription="@string/tool"
+            android:scaleType="center"
             app:srcCompat="@drawable/ic_pen"
-            android:contentDescription="@string/tool"/>
+            tools:ignore="KeyboardInaccessibleWidget" />
 
         <ImageView
             android:id="@+id/eraser_tool"
             android:layout_width="@dimen/tool_size"
             android:layout_height="@dimen/tool_size"
-            android:scaleType="center"
-            android:layout_marginLeft="5dp"
             android:layout_marginStart="5dp"
+            android:background="?selectableItemBackgroundBorderless"
             android:clickable="true"
-            android:background="@drawable/tool"
+            android:contentDescription="@string/tool"
+            android:scaleType="center"
             app:srcCompat="@drawable/ic_eraser"
-            android:contentDescription="@string/tool"/>
-
+            tools:ignore="KeyboardInaccessibleWidget" />
     </LinearLayout>
 
-    <com.android.graphics.CanvasView
-        android:id="@+id/canvas"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center_horizontal" />
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

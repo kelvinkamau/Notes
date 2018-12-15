@@ -95,6 +95,12 @@ public class SimpleNoteFragment extends NoteFragment {
                 body.undo();
             }
         });
+        view.findViewById(R.id.action_redo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                body.redo();
+            }
+        });
         body.setHtml(note.body);
     }
 }
