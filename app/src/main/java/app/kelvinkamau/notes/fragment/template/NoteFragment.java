@@ -33,7 +33,7 @@ abstract public class NoteFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         deleteBtn = getActivity().findViewById(R.id.delete_btn);
-        title = (EditText) view.findViewById(R.id.title_txt);
+        title =  view.findViewById(R.id.title_txt);
 
         Intent data = getActivity().getIntent();
         long noteId = data.getLongExtra(OpenHelper.COLUMN_ID, DatabaseModel.NEW_MODEL_ID);

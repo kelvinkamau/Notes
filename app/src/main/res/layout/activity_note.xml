@@ -24,7 +24,7 @@
             android:clickable="true"
             android:background="@drawable/ripple_circle"
             android:scaleType="center"
-            tools:ignore="MissingPrefix"
+            tools:ignore="KeyboardInaccessibleWidget,MissingPrefix"
             android:contentDescription="@string/back"/>
 
         <ImageView
@@ -37,7 +37,7 @@
             android:visibility="gone"
             android:background="@drawable/ripple_circle"
             android:scaleType="center"
-            tools:ignore="MissingPrefix"
+            tools:ignore="KeyboardInaccessibleWidget,MissingPrefix"
             android:contentDescription="@string/menu"/>
     </android.support.v7.widget.Toolbar>
 
@@ -45,4 +45,6 @@
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
+
 </LinearLayout>
