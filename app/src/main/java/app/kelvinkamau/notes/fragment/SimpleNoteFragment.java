@@ -1,8 +1,8 @@
 package app.kelvinkamau.notes.fragment;
 
-import android.support.v4.content.ContextCompat;
 import android.view.View;
 
+import androidx.core.content.ContextCompat;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.fragment.template.NoteFragment;
 import app.kelvinkamau.notes.model.DatabaseModel;
@@ -39,7 +39,7 @@ public class SimpleNoteFragment extends NoteFragment {
 
     @Override
     public void init(View view) {
-        body = (RichEditor) view.findViewById(R.id.editor);
+        body = view.findViewById(R.id.editor);
         body.setPlaceholder("Type notes here");
         body.setEditorBackgroundColor(ContextCompat.getColor(getContext(), R.color.ripple_dark));
 

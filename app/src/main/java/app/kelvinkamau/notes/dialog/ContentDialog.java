@@ -1,10 +1,6 @@
 package app.kelvinkamau.notes.dialog;
 
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +8,10 @@ import android.view.Window;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.DialogFragment;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.inner.Animator;
 import app.kelvinkamau.notes.widget.MaxHeightScrollView;
@@ -65,7 +65,7 @@ public class ContentDialog extends DialogFragment {
 
         final ContentDialog dialog = this;
 
-        TextView positive_btn = (TextView) view.findViewById(R.id.positive_btn);
+        TextView positive_btn = view.findViewById(R.id.positive_btn);
         if (positive != -1) {
             positive_btn.setVisibility(View.VISIBLE);
             positive_btn.setText(positive);
@@ -80,7 +80,7 @@ public class ContentDialog extends DialogFragment {
             positive_btn.setVisibility(View.GONE);
         }
 
-        TextView negative_btn = (TextView) view.findViewById(R.id.negative_btn);
+        TextView negative_btn = view.findViewById(R.id.negative_btn);
         if (negative != -1) {
             negative_btn.setVisibility(View.VISIBLE);
             negative_btn.setText(negative);
@@ -95,7 +95,7 @@ public class ContentDialog extends DialogFragment {
             negative_btn.setVisibility(View.GONE);
         }
 
-        TextView neutral_btn = (TextView) view.findViewById(R.id.neutral_btn);
+        TextView neutral_btn = view.findViewById(R.id.neutral_btn);
         if (neutral != -1) {
             neutral_btn.setVisibility(View.VISIBLE);
             neutral_btn.setText(neutral);

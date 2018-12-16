@@ -2,12 +2,11 @@ package app.kelvinkamau.notes.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.db.OpenHelper;
 import app.kelvinkamau.notes.fragment.DrawingNoteFragment;
@@ -36,7 +35,7 @@ public class NoteActivity extends AppCompatActivity implements NoteFragment.Call
 
         position = data.getIntExtra("position", 0);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         try {

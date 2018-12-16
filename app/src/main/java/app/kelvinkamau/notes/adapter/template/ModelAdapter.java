@@ -1,10 +1,10 @@
 package app.kelvinkamau.notes.adapter.template;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 import java.util.ArrayList;
 
+import androidx.recyclerview.widget.RecyclerView;
 import app.kelvinkamau.notes.model.DatabaseModel;
 import app.kelvinkamau.notes.widget.template.ModelViewHolder;
 

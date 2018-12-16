@@ -1,8 +1,9 @@
 package app.kelvinkamau.notes.fragment;
 
 import android.content.Intent;
-import android.support.design.widget.Snackbar;
 import android.view.View;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.Locale;
 

@@ -3,16 +3,12 @@ package app.kelvinkamau.notes.fragment.template;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,6 +16,11 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.Locale;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.adapter.template.ModelAdapter;
 import app.kelvinkamau.notes.db.Controller;
@@ -56,10 +57,10 @@ abstract public class RecyclerFragment<T extends DatabaseModel, A extends ModelA
         super.onViewCreated(view, savedInstanceState);
 
         fab = view.findViewById(R.id.fab);
-        recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
+        recyclerView = view.findViewById(R.id.recyclerView);
         empty = view.findViewById(R.id.empty);
-        selectionToolbar = (Toolbar) getActivity().findViewById(R.id.selection_toolbar);
-        selectionCounter = (TextView) selectionToolbar.findViewById(R.id.selection_counter);
+        selectionToolbar = getActivity().findViewById(R.id.selection_toolbar);
+        selectionCounter = selectionToolbar.findViewById(R.id.selection_counter);
 
         init(view);
 

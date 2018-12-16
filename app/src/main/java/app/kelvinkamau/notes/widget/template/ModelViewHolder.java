@@ -1,8 +1,8 @@
 package app.kelvinkamau.notes.widget.template;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import androidx.recyclerview.widget.RecyclerView;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.model.DatabaseModel;
 

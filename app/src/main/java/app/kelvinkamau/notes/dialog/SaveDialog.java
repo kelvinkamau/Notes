@@ -5,10 +5,6 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
-import android.support.annotation.Nullable;
-import android.support.annotation.StringRes;
-import android.support.v4.app.DialogFragment;
-import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +20,10 @@ import java.util.Calendar;
 import java.util.Comparator;
 import java.util.Locale;
 
+import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
+import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import app.kelvinkamau.notes.App;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.adapter.FolderAdapter;
@@ -104,7 +104,7 @@ public class SaveDialog extends DialogFragment {
             ((TextView) view.findViewById(R.id.title_txt)).setText(getString(title));
             current_path = App.last_path != null ? App.last_path : Environment.getExternalStorageDirectory().getAbsolutePath();
 
-            recyclerView = (FixedHeightRecyclerView) view.findViewById(R.id.recyclerView);
+            recyclerView = view.findViewById(R.id.recyclerView);
             items = new ArrayList<>();
             reload();
 
@@ -211,7 +211,7 @@ public class SaveDialog extends DialogFragment {
 
                                 @Override
                                 public void onInit(View content) {
-                                    name_txt = (EditText) content.findViewById(R.id.name_txt);
+                                    name_txt = content.findViewById(R.id.name_txt);
                                 }
                             }
                     ).show(getFragmentManager(), "");
