@@ -33,6 +33,7 @@ abstract public class NoteFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         deleteBtn = getActivity().findViewById(R.id.delete_btn);
+
         title =  view.findViewById(R.id.title_txt);
 
         Intent data = getActivity().getIntent();
@@ -55,6 +56,7 @@ abstract public class NoteFragment extends Fragment {
         } else {
             activity.setNoteResult(NoteActivity.RESULT_EDIT, false);
             deleteBtn.setVisibility(View.VISIBLE);
+
             deleteBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
