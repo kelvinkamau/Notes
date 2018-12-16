@@ -1,6 +1,5 @@
 package app.kelvinkamau.notes.adapter;
 
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import androidx.recyclerview.widget.RecyclerView;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.model.Folder;
 
@@ -62,8 +62,8 @@ public class FolderAdapter extends RecyclerView.Adapter<FolderAdapter.ViewHolder
         public ViewHolder(View itemView) {
             super(itemView);
             holder = itemView.findViewById(R.id.holder);
-            title = (TextView) itemView.findViewById(R.id.title);
-            icon = (ImageView) itemView.findViewById(R.id.icon);
+            title = itemView.findViewById(R.id.title);
+            icon = itemView.findViewById(R.id.icon);
         }
     }
 }
