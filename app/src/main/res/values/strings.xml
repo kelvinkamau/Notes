@@ -9,6 +9,7 @@
     <string name="new_category">New category</string>
     <string name="empty">empty</string>
     <string name="no_categories">Start by adding a category</string>
+    <string name="notify_save">Your note will be automatically saved when you press the back button</string>
     <string name="no_notes">No notes here</string>
     <string name="no_categories_desc">Create a new category by clicking the add a category\n button below</string>
     <string name="no_notes_desc">Start taking notes by clicking the add note\n button below</string>
@@ -16,7 +17,7 @@
     <string name="one_note">1 note</string>
     <string name="counter_note">%1$d notes</string>
     <string name="title">Title</string>
-    <string name="choose_a_color">Select a color:</string>
+    <string name="choose_a_color">Select a color</string>
     <string name="create">Create</string>
     <string name="cancel">Cancel</string>
     <string name="theme">theme</string>
@@ -31,7 +32,7 @@
     <string name="storage_permission">Notes needs to access your external storage to store data.</string>
     <string name="request">Request</string>
     <string name="permission_error">Permission not granted</string>
-    <string name="permission_error_desc">Notes might work incorrectly without permission to access the external storage.</string>
+    <string name="permission_error_desc">Notes will not work properly without permission to access the external storage.</string>
     <string name="continue_anyway">Continue anyway</string>
     <string name="permission_granted">Permission granted</string>
     <string name="backup">Backup data</string>

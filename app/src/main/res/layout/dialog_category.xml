@@ -17,17 +17,17 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/text_input_layout"
         android:layout_width="match_parent"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_height="wrap_content">
 
-        <EditText
-            android:id="@+id/title_txt"
+        <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:fontFamily="@font/productsansregular"
             android:layout_height="wrap_content"
+            android:id="@+id/title_txt"
+            android:fontFamily="@font/productsansregular"
             android:textColorHint="@color/hint_text"
             android:textSize="@dimen/medium_text"
             android:focusable="true"
-            android:textColor="@color/main_text"
             android:hint="@string/title"/>
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -36,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/small_text"
+        android:gravity="center"
         android:text="@string/choose_a_color"
         android:fontFamily="@font/productsansregular"
         android:textColor="@color/secondary_text"
@@ -51,12 +52,12 @@
         android:layout_marginTop="16dp">
 
         <ImageView
-            android:id="@+id/theme_red"
+            android:id="@+id/theme_purple"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:contentDescription="@string/theme"
             android:scaleType="center"
-            android:background="@drawable/circle_red"/>
+            android:background="@drawable/circle_purple" />
 
         <ImageView
             android:id="@+id/theme_pink"
@@ -71,11 +72,11 @@
             android:background="@drawable/circle_pink"/>
 
         <ImageView
-            android:id="@+id/theme_purple"
+            android:id="@+id/theme_red"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:scaleType="center"
-            android:background="@drawable/circle_purple"
+            android:background="@drawable/circle_red"
             android:contentDescription="@string/theme"/>
 
     </LinearLayout>
