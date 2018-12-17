@@ -62,6 +62,8 @@ public class NoteActivity extends AppCompatActivity implements NoteFragment.Call
                     .add(R.id.container, fragment)
                     .commit();
         }
+
+
     }
 
     @Override
@@ -79,6 +81,8 @@ public class NoteActivity extends AppCompatActivity implements NoteFragment.Call
                         data.putExtra(OpenHelper.COLUMN_DATE, fragment.note.createdAt);
                     case RESULT_EDIT:
                         data.putExtra(OpenHelper.COLUMN_TITLE, fragment.note.title);
+                        data.putExtra(OpenHelper.COLUMN_DATE, fragment.note.createdAt);
+
                 }
 
                 runOnUiThread(new Runnable() {

@@ -1,6 +1,9 @@
 package app.kelvinkamau.notes.fragment;
 
+import android.preference.PreferenceManager;
 import android.view.View;
+
+import com.google.android.material.snackbar.Snackbar;
 
 import androidx.core.content.ContextCompat;
 import app.kelvinkamau.notes.R;
@@ -10,6 +13,7 @@ import jp.wasabeef.richeditor.RichEditor;
 
 public class SimpleNoteFragment extends NoteFragment {
     private RichEditor body;
+    private PreferenceManager PrefManager;
 
     public SimpleNoteFragment() {
     }
@@ -17,6 +21,7 @@ public class SimpleNoteFragment extends NoteFragment {
     @Override
     public int getLayout() {
         return R.layout.fragment_simple_note;
+
     }
 
     @Override
@@ -39,9 +44,20 @@ public class SimpleNoteFragment extends NoteFragment {
 
     @Override
     public void init(View view) {
+
+
         body = view.findViewById(R.id.editor);
         body.setPlaceholder("Type notes here");
         body.setEditorBackgroundColor(ContextCompat.getColor(getContext(), R.color.ripple_dark));
+
+        Snackbar.make(view, R.string.notify_save, Snackbar.LENGTH_INDEFINITE)
+                .setAction(R.string.ok, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+                    }
+                })
+                .show();
 
         view.findViewById(R.id.action_bold).setOnClickListener(new View.OnClickListener() {
             @Override

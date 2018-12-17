@@ -9,6 +9,7 @@
     android:background="@drawable/ripple_rect"
     android:padding="16dp">
 
+
     <TextView
         android:id="@+id/badge_txt"
         android:layout_width="@dimen/badge_size"

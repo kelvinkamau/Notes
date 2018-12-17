@@ -51,7 +51,7 @@ public class MainFragment extends RecyclerFragment<Category, CategoryAdapter> {
 
     @Override
     public void onClickFab() {
-        categoryDialogTheme = Category.THEME_GREEN;
+        categoryDialogTheme = Category.THEME_ORANGE;
         displayCategoryDialog(
                 R.string.new_category,
                 R.string.create,
@@ -253,7 +253,7 @@ public class MainFragment extends RecyclerFragment<Category, CategoryAdapter> {
             case Category.THEME_TEAL:
                 return (ImageView) view.findViewById(R.id.theme_teal);
             default:
-                return (ImageView) view.findViewById(R.id.theme_green);
+                return (ImageView) view.findViewById(R.id.theme_orange);
         }
     }
 
