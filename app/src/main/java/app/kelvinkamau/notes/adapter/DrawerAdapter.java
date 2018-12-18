@@ -2,6 +2,8 @@ package app.kelvinkamau.notes.adapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,11 +46,6 @@ public class DrawerAdapter extends BaseAdapter {
 
         drawers[++counter] = Drawer.divider();
 
-       /* drawers[++counter] = new Drawer(
-                Drawer.TYPE_ABOUT,
-                R.drawable.drawer_about,
-                R.string.about
-        );*/
     }
 
     @Override
@@ -81,6 +78,8 @@ public class DrawerAdapter extends BaseAdapter {
         final Drawer drawer = getItem(position);
         ViewHolder holder = null;
 
+        Typeface tf = Typeface.createFromAsset(context.getAssets(), "fonts/productsansregular.ttf");
+
         if (convertView == null) {
             LayoutInflater inflator = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
 
@@ -91,8 +90,12 @@ public class DrawerAdapter extends BaseAdapter {
                 default:
                     convertView = inflator.inflate(R.layout.drawer_item, parent, false);
                     holder = new ViewHolder();
-                    holder.icon = (ImageView) convertView.findViewById(R.id.icon);
-                    holder.title = (TextView) convertView.findViewById(R.id.title);
+                    holder.icon = convertView.findViewById(R.id.icon);
+                    holder.title = convertView.findViewById(R.id.title);
+                    holder.title.setTypeface(tf);
+                    holder.title.setTextColor(Color.GRAY);
+                    holder.title.setTextSize(15);
+
                     holder.item = convertView.findViewById(R.id.item);
                     convertView.setTag(holder);
                     break;
