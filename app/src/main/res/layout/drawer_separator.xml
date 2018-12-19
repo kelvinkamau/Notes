@@ -4,9 +4,10 @@
     android:layout_height="16dp">
 
     <View
-        android:layout_width="match_parent"
+        android:layout_width="225dp"
+        android:layout_centerVertical="true"
         android:layout_height="1dp"
-        android:background="@color/white"
-        android:layout_centerVertical="true"/>
+        android:layout_marginStart="20dp"
+        android:background="@color/splitter" />
 
 </RelativeLayout>

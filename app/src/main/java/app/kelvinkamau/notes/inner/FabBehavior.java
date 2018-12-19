@@ -42,7 +42,7 @@ public class FabBehavior extends CoordinatorLayout.Behavior<Fab> {
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed);
 
         if (dyConsumed > 0) {
-            child.hide();
+            child.show();
         } else if (dyConsumed < 0) {
             child.show();
         }

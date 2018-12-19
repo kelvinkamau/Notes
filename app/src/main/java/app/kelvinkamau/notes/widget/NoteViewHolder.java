@@ -18,6 +18,11 @@ public class NoteViewHolder extends ModelViewHolder<Note> {
     public NoteViewHolder(View itemView) {
         super(itemView);
         badge = itemView.findViewById(R.id.badge_icon);
+        int colors[] = {R.color.amber, R.color.red, R.color.green, R.color.cyan,
+                R.color.pink, R.color.purple, R.color.blue, R.color.teal,
+                R.color.orange};
+        /* badge.setBackgroundColor(Math.random() * colors.length);*/
+        //todo play around with badge icon
         title = itemView.findViewById(R.id.title_txt);
         date = itemView.findViewById(R.id.date_txt);
     }

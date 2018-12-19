@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         setContentView(R.layout.activity_main);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
-        toolbar =  findViewById(R.id.toolbar);
+        toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         try {
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         // Set date in drawer
         ((TextView) findViewById(R.id.drawer_date)).setText(Formatter.formatDate());
 
-        drawerLayout =  findViewById(R.id.drawer_layout);
+        drawerLayout = findViewById(R.id.drawer_layout);
         drawerHolder = findViewById(R.id.drawer_holder);
         ListView drawerList = findViewById(R.id.drawer_list);
 
@@ -177,6 +177,19 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                         @Override
                         public void run() {
                             switch (type) {
+                                case Drawer.TYPE_ABOUT:
+                                    new MaterialDialog.Builder(MainActivity.this)
+                                            .title(R.string.app_name)
+                                            .content(R.string.about_desc)
+                                            .positiveText(R.string.ok)
+                                            .onPositive(new MaterialDialog.SingleButtonCallback() {
+                                                @Override
+                                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
+                                                    dialog.dismiss();
+                                                }
+                                            })
+                                            .show();
+                                    break;
                                 case Drawer.TYPE_BACKUP:
                                     backupData();
                                     break;
