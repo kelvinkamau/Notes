@@ -135,7 +135,7 @@ public class CategoryFragment extends RecyclerFragment<Note, NoteAdapter> {
                                 @Override
                                 public void run() {
                                     final Note deletedItem = deleteItem(position);
-                                    Snackbar.make(fab != null ? fab : selectionToolbar, "1 note was deleted", 7000)
+                                    Snackbar.make(fab != null ? fab : selectionToolbar, "1 note was deleted", 5000)
                                             .setAction(R.string.undo, new View.OnClickListener() {
                                                 @Override
                                                 public void onClick(View view) {

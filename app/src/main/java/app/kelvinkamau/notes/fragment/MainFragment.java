@@ -252,6 +252,8 @@ public class MainFragment extends RecyclerFragment<Category, CategoryAdapter> {
                 return (ImageView) view.findViewById(R.id.theme_red);
             case Category.THEME_TEAL:
                 return (ImageView) view.findViewById(R.id.theme_teal);
+            case Category.THEME_GREEN:
+                return (ImageView) view.findViewById(R.id.theme_green);
             default:
                 return (ImageView) view.findViewById(R.id.theme_orange);
         }

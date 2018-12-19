@@ -17,6 +17,7 @@ public class CategoryAdapter extends ModelAdapter<Category, CategoryViewHolder> 
 
     @Override
     public CategoryViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new CategoryViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_category, parent, false));
+        return new CategoryViewHolder(LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_category, parent, false));
     }
 }

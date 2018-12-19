@@ -5,7 +5,6 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import androidx.appcompat.widget.AppCompatImageView;
-import app.kelvinkamau.notes.App;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.inner.Animator;
 
@@ -40,7 +39,7 @@ public class Fab extends AppCompatImageView {
     /**
      * Makes the fab gone if it is visible and smart fab preference is enabled
      */
-    public void hide() {
+    /*public void hide() {
         if (App.smartFab && !isHidden) {
             isHidden = true;
             Animator.create(getContext().getApplicationContext())
@@ -48,5 +47,5 @@ public class Fab extends AppCompatImageView {
                     .setEndVisibility(View.GONE)
                     .animate(R.anim.fab_scroll_out);
         }
-    }
+    }*/
 }

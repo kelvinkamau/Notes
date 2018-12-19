@@ -1,9 +1,10 @@
 <resources>
     <string name="app_name">Notes</string>
     <string name="menu">menu</string>
-    <string name="settings">Notes App v1.0.1</string>
+    <string name="aboutapp">About &amp; Licences</string>
     <string name="about">About</string>
     <string name="exit">Exit</string>
+    <string name="trash">Trash</string>
     <string name="notes_categories">Notes categories</string>
     <string name="exit_message">Press again to exit</string>
     <string name="new_category">New category</string>
@@ -53,7 +54,7 @@
         </TT>\n\n
     <b><BIG>App by Kelvin Kamau.</BIG></b>\n
         ================================\n
-        <b><i><BIG>Get other apps by developer</BIG></i></b>\n
+        <b><BIG>Get other apps by developer</BIG></b>\n
         <TT><b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.reminders">Reminders</a></BIG></b>\n
          <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pingpong">PingPong</a></BIG></b>\n
          <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pace2d">Pace2D</a></BIG></b>

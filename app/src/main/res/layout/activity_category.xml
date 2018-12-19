@@ -43,7 +43,7 @@
         android:id="@+id/selection_toolbar"
         android:layout_height="@dimen/toolbar_height"
         android:layout_width="match_parent"
-        android:background="@color/gray_dark"
+        android:background="@color/hint_text"
         android:visibility="gone"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp">

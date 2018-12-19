@@ -46,6 +46,12 @@ public class DrawerAdapter extends BaseAdapter {
 
         drawers[++counter] = Drawer.divider();
 
+       /* drawers[++counter] = new Drawer(
+                Drawer.TYPE_ABOUT,
+                R.drawable.drawer_trash,
+                R.string.trash
+        );*/
+
     }
 
     @Override

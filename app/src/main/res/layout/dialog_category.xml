@@ -52,15 +52,15 @@
         android:layout_marginTop="16dp">
 
         <ImageView
-            android:id="@+id/theme_purple"
+            android:id="@+id/theme_orange"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:contentDescription="@string/theme"
             android:scaleType="center"
-            android:background="@drawable/circle_purple" />
+            android:background="@drawable/circle_orange" />
 
         <ImageView
-            android:id="@+id/theme_pink"
+            android:id="@+id/theme_red"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
@@ -69,14 +69,14 @@
             android:layout_marginEnd="10dp"
             android:scaleType="center"
             android:contentDescription="@string/theme"
-            android:background="@drawable/circle_pink"/>
+            android:background="@drawable/circle_red" />
 
         <ImageView
-            android:id="@+id/theme_red"
+            android:id="@+id/theme_pink"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:scaleType="center"
-            android:background="@drawable/circle_red"
+            android:background="@drawable/circle_pink"
             android:contentDescription="@string/theme"/>
 
     </LinearLayout>
@@ -90,15 +90,15 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:id="@+id/theme_blue"
+            android:id="@+id/theme_purple"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:scaleType="center"
             android:contentDescription="@string/theme"
-            android:background="@drawable/circle_blue"/>
+            android:background="@drawable/circle_purple" />
 
         <ImageView
-            android:id="@+id/theme_cyan"
+            android:id="@+id/theme_blue"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
@@ -107,15 +107,15 @@
             android:layout_marginEnd="10dp"
             android:scaleType="center"
             android:contentDescription="@string/theme"
-            android:background="@drawable/circle_cyan"/>
+            android:background="@drawable/circle_blue" />
 
         <ImageView
-            android:id="@+id/theme_teal"
+            android:id="@+id/theme_cyan"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:scaleType="center"
             android:contentDescription="@string/theme"
-            android:background="@drawable/circle_teal"/>
+            android:background="@drawable/circle_cyan" />
 
     </LinearLayout>
 
@@ -128,15 +128,15 @@
         android:layout_marginTop="10dp">
 
         <ImageView
-            android:id="@+id/theme_green"
+            android:id="@+id/theme_teal"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:scaleType="center"
             android:contentDescription="@string/theme"
-            android:background="@drawable/circle_green"/>
+            android:background="@drawable/circle_teal" />
 
         <ImageView
-            android:id="@+id/theme_amber"
+            android:id="@+id/theme_green"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
@@ -145,15 +145,15 @@
             android:layout_marginEnd="10dp"
             android:scaleType="center"
             android:contentDescription="@string/theme"
-            android:background="@drawable/circle_amber"/>
+            android:background="@drawable/circle_green" />
 
         <ImageView
-            android:id="@+id/theme_orange"
+            android:id="@+id/theme_amber"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:scaleType="center"
             android:contentDescription="@string/theme"
-            android:background="@drawable/circle_orange"/>
+            android:background="@drawable/circle_amber" />
 
     </LinearLayout>
 
