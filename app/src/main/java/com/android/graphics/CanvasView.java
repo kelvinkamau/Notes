@@ -66,6 +66,7 @@ public class CanvasView extends View {
     private float startY = 0F;
     private float controlX = 0F;
     private float controlY = 0F;
+
     /**
      * Copy Constructor
      *
@@ -77,6 +78,7 @@ public class CanvasView extends View {
         super(context, attrs, defStyle);
         this.setup(context);
     }
+
     /**
      * Copy Constructor
      *
@@ -634,8 +636,6 @@ public class CanvasView extends View {
     public void setPaintFillColor(int color) {
         this.paintFillColor = color;
     }
-
-    ;
 
     /**
      * This method is getter for stroke width.
