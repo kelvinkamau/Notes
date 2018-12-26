@@ -3,8 +3,6 @@ package app.kelvinkamau.notes.fragment;
 import android.preference.PreferenceManager;
 import android.view.View;
 
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.core.content.ContextCompat;
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.fragment.template.NoteFragment;
@@ -47,17 +45,17 @@ public class SimpleNoteFragment extends NoteFragment {
 
 
         body = view.findViewById(R.id.editor);
-        body.setPlaceholder("Type notes here");
+        body.setPlaceholder("Start typing here & click the back icon to autosave");
         body.setEditorBackgroundColor(ContextCompat.getColor(getContext(), R.color.ripple_dark));
 
-        Snackbar.make(view, R.string.notify_save, Snackbar.LENGTH_INDEFINITE)
+        /*Snackbar.make(view, R.string.notify_save, Snackbar.LENGTH_INDEFINITE)
                 .setAction(R.string.ok, new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
 
                     }
                 })
-                .show();
+                .show();*/
 
         view.findViewById(R.id.action_bold).setOnClickListener(new View.OnClickListener() {
             @Override

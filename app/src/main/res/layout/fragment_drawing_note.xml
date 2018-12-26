@@ -43,18 +43,6 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/action_undo"
-            android:layout_width="@dimen/tool_size"
-            android:layout_height="@dimen/tool_size"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/tool"
-            android:scaleType="center"
-            app:srcCompat="@drawable/ic_undo"
-            tools:ignore="KeyboardInaccessibleWidget" />
-
-
-        <ImageView
             android:id="@+id/pen_tool"
             android:layout_width="@dimen/tool_size"
             android:layout_height="@dimen/tool_size"
@@ -75,17 +63,6 @@
             android:contentDescription="@string/tool"
             android:scaleType="center"
             app:srcCompat="@drawable/ic_eraser"
-            tools:ignore="KeyboardInaccessibleWidget" />
-
-        <ImageView
-            android:id="@+id/action_redo"
-            android:layout_width="@dimen/tool_size"
-            android:layout_height="@dimen/tool_size"
-            android:background="?selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/tool"
-            android:scaleType="center"
-            app:srcCompat="@drawable/ic_redo"
             tools:ignore="KeyboardInaccessibleWidget" />
 
     </LinearLayout>

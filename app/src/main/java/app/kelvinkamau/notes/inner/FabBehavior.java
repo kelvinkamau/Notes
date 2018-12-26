@@ -18,6 +18,7 @@ public class FabBehavior extends CoordinatorLayout.Behavior<Fab> {
     @Override
     public boolean layoutDependsOn(CoordinatorLayout parent, Fab child, View dependency) {
         return dependency instanceof Snackbar.SnackbarLayout;
+        //TODO START CHECKING HERE
     }
 
     @Override
@@ -26,8 +27,9 @@ public class FabBehavior extends CoordinatorLayout.Behavior<Fab> {
             float translationY = Math.min(0, dependency.getTranslationY() - dependency.getHeight());
             child.setTranslationY(translationY);
             return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     @Override

@@ -49,7 +49,7 @@ public class CanvasView extends View {
     private Paint.Style paintStyle = Paint.Style.STROKE;
     private int paintStrokeColor = Color.BLACK;
     private int paintFillColor = Color.BLACK;
-    private float paintStrokeWidth = 3F;
+    private float paintStrokeWidth = 5F;
     private int opacity = 255;
     private float blur = 0F;
     private Paint.Cap lineCap = Paint.Cap.ROUND;
@@ -655,7 +655,7 @@ public class CanvasView extends View {
         if (width >= 0) {
             this.paintStrokeWidth = width;
         } else {
-            this.paintStrokeWidth = 3F;
+            this.paintStrokeWidth = 5F;
         }
     }
 

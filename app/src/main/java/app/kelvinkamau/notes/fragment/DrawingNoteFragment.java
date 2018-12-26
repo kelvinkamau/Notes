@@ -43,14 +43,6 @@ public class DrawingNoteFragment extends NoteFragment {
     @Override
     public void init(View view) {
         canvas = view.findViewById(R.id.canvas);
-
-        view.findViewById(R.id.action_undo).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
         view.findViewById(R.id.pen_tool).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
