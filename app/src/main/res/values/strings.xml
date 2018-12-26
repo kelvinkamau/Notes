@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Notes</string>
     <string name="menu">menu</string>
-    <string name="aboutapp">About &amp; Licences</string>
+    <string name="aboutapp">Acknowledgements</string>
     <string name="about">About</string>
     <string name="exit">Exit</string>
     <string name="trash">Trash</string>
@@ -59,17 +59,13 @@
          <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pingpong">PingPong</a></BIG></b>\n
          <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pace2d">Pace2D</a></BIG></b>
         </TT>\n\n
-        <BIG><b>OPEN SOURCE LIBRARIES:</b></BIG> \n <b>
-            ================================\n\n
-            1)  Android RecyclerView
-        </b> \n\n<TT>Copyright © 2017 The Android Open Source Project, Inc.\n\n
-
-
-                            Licensed under the Apache License, Version 2.0 (the "License");
+        <BIG><b>Open Source Libraries:</b></BIG> \n <b>
+            ================================\n\n1)  Android Architecture Components
+        </b> \n\n<TT>Copyright © 2014 The Android Open Source Project, Inc.\n\nApache License 2.0\n\nLicensed under the Apache License, Version 2.0 (the "License");
                             you may not use this file except in compliance with the License.
                             You may obtain a copy of the License at\n\n
 
-                               http://www.apache.org/licenses/LICENSE-2.0\n\n
+            <b><a href="http://www.apache.org/licenses/LICENSE-2.0\n\n">http://www.apache.org/licenses/LICENSE-2.0\n\n</a></b>
 
                             Unless required by applicable law or agreed to in writing, software
                             distributed under the License is distributed on an "AS IS" BASIS,
@@ -79,13 +75,12 @@
 
 
 
-         <b>      2)  FloatingActionButton</b> \n\n<TT>Copyright © 2017 The Android Open Source Project, Inc.\n\n
-
-                            Licensed under the Apache License, Version 2.0 (the "License");
+         <b>2)  Android Support Library
+        </b> \n\n<TT>Copyright © 2014 The Android Open Source Project, Inc.\n\nApache License 2.0\n\nLicensed under the Apache License, Version 2.0 (the "License");
                             you may not use this file except in compliance with the License.
                             You may obtain a copy of the License at\n\n
 
-                                 http://www.apache.org/licenses/LICENSE-2.0\n\n
+            <b><a href="http://www.apache.org/licenses/LICENSE-2.0\n\n">http://www.apache.org/licenses/LICENSE-2.0\n\n</a></b>
 
                             Unless required by applicable law or agreed to in writing, software
                             distributed under the License is distributed on an "AS IS" BASIS,
@@ -93,10 +88,9 @@
                             See the License for the specific language governing permissions and
                             limitations under the License.</TT>\n\n\n
 
-        <b>3)  RecyclerView Multiselect</b>
-                               \n\n<TT>The MIT License (MIT)\n\n
+        <b>3) Material Dialogs
+        </b> \n\n<TT>Copyright © 2018 Aidan Follestad\n\nThe MIT License (MIT)\n\n
 
-    Copyright © 2014 Big Nerd Ranch\n\n
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
     in the Software without restriction, including without limitation the rights
@@ -113,29 +107,9 @@
     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
     SOFTWARE.</TT>\n\n\n
 
-        <b>4) Material Dialogs</b> \n\n<TT>The MIT License (MIT)\n\n
+         <b>4) Rich Editor Android</b> \n\n<TT>Copyright 2017 Wasabeef\n\nApache License\n\n
 
-    Copyright © 2018 Aidan Follestad\n\n
-    Permission is hereby granted, free of charge, to any person obtaining a copy
-    of this software and associated documentation files (the "Software"), to deal
-    in the Software without restriction, including without limitation the rights
-    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-    copies of the Software, and to permit persons to whom the Software is
-    furnished to do so, subject to the following conditions:
-    The above copyright notice and this permission notice shall be included in all
-    copies or substantial portions of the Software.
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-    SOFTWARE.</TT>\n\n\n
-
-         <b>4) Rich Editor Android</b> \n\n<TT>Apache License\n\n
-
-   Copyright 2017 Wasabeef\n\n
-   Licensed under the Apache License, Version 2.0 (the "License");
+Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
@@ -145,23 +119,25 @@ Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
-limitations under the License.</TT>\n\n\n
+limitations under the License.</TT>\n
 
 
-    \n\n  <b>5) Material Design Icons</b> \n\n<TT>Attribution 4.0 International\n\n
+    \n\n  <b>5) Kotlin runtime</b> \n\n<TT>Copyright © 2010-2018 Jetbrains s.r.o
+\n\nApache License 2.0\n\n
 
-    ===========================\n\n\n
 
-    Creative Commons Corporation ("Creative Commons") is not a law firm and
-    does not provide legal services or legal advice. Distribution of
-    Creative Commons public licenses does not create a lawyer-client or
-    other relationship. Creative Commons makes its licenses and related
-    information available on an "as-is" basis. Creative Commons gives no
-    warranties regarding its licenses, any material licensed under their
-    terms and conditions, or any related information. Creative Commons
-    disclaims all liability for damages resulting from their use to the
-    fullest extent possible.\n\n
 
+   \nLicensed under the Apache License, Version 2.0 (the "License");
+                            you may not use this file except in compliance with the License.
+                            You may obtain a copy of the License at\n\n
+
+            <b><a href="http://www.apache.org/licenses/LICENSE-2.0\n\n">http://www.apache.org/licenses/LICENSE-2.0\n\n</a></b>
+
+                            Unless required by applicable law or agreed to in writing, software
+                            distributed under the License is distributed on an "AS IS" BASIS,
+                            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+                            See the License for the specific language governing permissions and
+                            limitations under the License.\n\n
     Using Creative Commons Public Licenses\n\n
 
     Creative Commons public licenses provide a standard set of terms and
@@ -516,6 +492,7 @@ limitations under the License.</TT>\n\n\n
     c. No term or condition of this Public License will be waived and no
     failure to comply consented to unless expressly agreed to by the
     Licensor.\n\n
+
 
     d. Nothing in this Public License constitutes or may be interpreted
     as a limitation upon, or waiver of, any privileges and immunities
