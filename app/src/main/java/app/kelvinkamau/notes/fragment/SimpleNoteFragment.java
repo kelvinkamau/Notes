@@ -45,17 +45,9 @@ public class SimpleNoteFragment extends NoteFragment {
 
 
         body = view.findViewById(R.id.editor);
-        body.setPlaceholder("Start typing here & click the back icon to autosave");
+        body.setEditorFontSize(19);
+        body.setPlaceholder("Type notes here then press ← to save");
         body.setEditorBackgroundColor(ContextCompat.getColor(getContext(), R.color.ripple_dark));
-
-        /*Snackbar.make(view, R.string.notify_save, Snackbar.LENGTH_INDEFINITE)
-                .setAction(R.string.ok, new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-
-                    }
-                })
-                .show();*/
 
         view.findViewById(R.id.action_bold).setOnClickListener(new View.OnClickListener() {
             @Override
