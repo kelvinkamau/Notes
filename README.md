@@ -14,3 +14,10 @@ Notes
 <img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/three.png"/> &nbsp;
 <img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/four.png"/>
 
+## Milestones
+
+* Archive activity
+* Trash activity
+* Autodraw
+* Smart compose
+* Firebase storage
