@@ -85,7 +85,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:layout_marginStart="70dp"
+            android:layout_marginStart="68dp"
             android:fontFamily="@font/productsansregular"
             android:text="@string/aboutapp"
             android:textColor="#888888"

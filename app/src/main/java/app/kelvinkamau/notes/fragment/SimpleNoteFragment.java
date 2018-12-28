@@ -1,6 +1,5 @@
 package app.kelvinkamau.notes.fragment;
 
-import android.preference.PreferenceManager;
 import android.view.View;
 
 import androidx.core.content.ContextCompat;
@@ -11,7 +10,6 @@ import jp.wasabeef.richeditor.RichEditor;
 
 public class SimpleNoteFragment extends NoteFragment {
     private RichEditor body;
-    private PreferenceManager PrefManager;
 
     public SimpleNoteFragment() {
     }
