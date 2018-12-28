@@ -70,23 +70,4 @@
         app:srcCompat="@drawable/fab_add_category"
         app:tint="@color/white" />
 
-    <!--
-    <app.kelvinkamau.notes.widget.Fab
-        android:id="@+id/fab"
-        android:layout_width="@dimen/fab"
-        android:layout_height="@dimen/fab"
-        android:elevation="4dp"
-        android:scaleType="center"
-        app:layout_anchorGravity="bottom|end"
-        android:clickable="true"
-        android:background="?attr/fabColor"
-        app:srcCompat="@drawable/fab_add_category"
-        android:contentDescription="@string/new_category"
-        android:layout_gravity="end|bottom"
-        android:layout_marginRight="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_behavior="app.kelvinkamau.notes.inner.FabBehavior"
-        tools:ignore="KeyboardInaccessibleWidget" />-->
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
