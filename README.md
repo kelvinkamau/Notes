@@ -25,6 +25,7 @@ Notes
 - [ ] Chrome browser extension
 - [ ] Date update on edit note
 - [ ] Trash activity
+- [ ] Archive activity
 - [ ] AI - Autodraw
 - [ ] AI - Smart compose
 
