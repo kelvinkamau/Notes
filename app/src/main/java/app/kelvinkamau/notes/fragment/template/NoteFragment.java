@@ -83,6 +83,7 @@ abstract public class NoteFragment extends Fragment {
         if (note.id == DatabaseModel.NEW_MODEL_ID) {
             note.createdAt = System.currentTimeMillis();
         }
+
     }
 
     abstract public int getLayout();

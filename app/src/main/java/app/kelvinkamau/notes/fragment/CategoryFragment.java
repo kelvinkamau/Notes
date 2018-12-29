@@ -93,6 +93,7 @@ public class CategoryFragment extends RecyclerFragment<Note, NoteAdapter> {
                         intent.putExtra(OpenHelper.COLUMN_PARENT_ID, categoryId);
                         intent.putExtra(OpenHelper.COLUMN_THEME, categoryTheme);
                         startActivityForResult(intent, NoteActivity.REQUEST_CODE);
+
                     }
                 });
 
