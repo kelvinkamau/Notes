@@ -16,8 +16,15 @@ Notes
 
 ## Milestones
 
-* Archive activity
-* Trash activity
-* Autodraw
-* Smart compose
-* Firebase storage
+- [ ] FAB for notes displacement
+- [ ] Undo & Redo for canvas
+- [x] Colors on notes list
+- [ ] Save / Delete toast notification
+- [ ] Firebase storage
+- [ ] Google Authentication
+- [ ] Chrome browser extension
+- [ ] Date update on edit note
+- [ ] Trash activity
+- [ ] AI - Autodraw
+- [ ] AI - Smart compose
+
