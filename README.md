@@ -2,8 +2,10 @@ Notes
 =======
 **Notes** is a simple note taking app for Android.
 
-## Features
+## Get app on Google Play
+<a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.notes"><img height="50px" src="https://github.com/kelvinkamau/Reminders/blob/master/screenshots/playstore.png"/></a> &nbsp;
 
+## Features
 - Create categories with different theme colors
 - Take notes & stylize them with **bold**, <s>strikethrough</s>, <i>italics</i>, <u>underline</u>, add bullets
 - Take drawing notes
