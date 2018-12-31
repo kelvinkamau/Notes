@@ -3,12 +3,10 @@ package app.kelvinkamau.notes.inner;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
-
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.ViewCompat;
 import app.kelvinkamau.notes.widget.Fab;
+import com.google.android.material.snackbar.Snackbar;
 
 @SuppressWarnings("unused")
 public class FabBehavior extends CoordinatorLayout.Behavior<Fab> {
@@ -26,10 +24,9 @@ public class FabBehavior extends CoordinatorLayout.Behavior<Fab> {
         if (dependency instanceof Snackbar.SnackbarLayout) {
             float translationY = Math.min(0, dependency.getTranslationY() - dependency.getHeight());
             child.setTranslationY(translationY);
-            //TODO START CHECKING HERE
-            //todo smart compose & autodraw
             return true;
         } else {
+            child.setTranslationY(0.0f);
             return false;
         }
     }

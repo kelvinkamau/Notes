@@ -3,6 +3,7 @@ package app.kelvinkamau.notes.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,8 +63,6 @@ public class NoteActivity extends AppCompatActivity implements NoteFragment.Call
                     .add(R.id.container, fragment)
                     .commit();
         }
-
-
     }
 
     @Override
@@ -90,9 +89,13 @@ public class NoteActivity extends AppCompatActivity implements NoteFragment.Call
                     public void run() {
                         setResult(noteResult, data);
                         finish();
+                        Toast.makeText(NoteActivity.this, "Note saved", Toast.LENGTH_SHORT).show();
+
                     }
                 });
+
             }
+
         });
     }
 
