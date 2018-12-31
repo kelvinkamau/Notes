@@ -2,12 +2,10 @@ package app.kelvinkamau.notes.fragment;
 
 import android.util.Base64;
 import android.view.View;
-
-import com.android.graphics.CanvasView;
-
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.fragment.template.NoteFragment;
 import app.kelvinkamau.notes.model.DatabaseModel;
+import com.android.graphics.CanvasView;
 
 public class DrawingNoteFragment extends NoteFragment {
     private CanvasView canvas;
@@ -56,6 +54,21 @@ public class DrawingNoteFragment extends NoteFragment {
             public void onClick(View view) {
                 canvas.setMode(CanvasView.Mode.ERASER);
                 canvas.setPaintStrokeWidth(40F);
+            }
+        });
+
+        view.findViewById(R.id.undo_tool).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //todo add undo canvas method
+            }
+        });
+
+        view.findViewById(R.id.redo_tool).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //todo add redo canvas method
+
             }
         });
 
