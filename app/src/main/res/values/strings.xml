@@ -53,14 +53,21 @@
     <string name="about_desc"><TT>An elegant and hassle free way to create notes and categorize them.
         </TT>\n\n
     <b><BIG>App by Kelvin Kamau.</BIG></b>\n
-        ================================\n\n
+        _________________________________________\n\n
+
+        <TT>
+
+            <b><BIG><a style="text-decoration: none;" href="https://play.google.com/store/apps/details?id=app.kelvinkamau.notes"> Rate this app</a> <b>--------- ⭐⭐⭐⭐⭐</b> </BIG></b></TT>\n\n
+
+        _________________________________________\n\n
+
         <b><BIG>Get other apps by developer</BIG></b>\n
         <TT><b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.reminders">Reminders</a></BIG></b>\n
          <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pingpong">PingPong</a></BIG></b>\n
          <b><BIG><a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.pace2d">Pace2D</a></BIG></b>
         </TT>\n\n
         <BIG><b>Open Source Libraries:</b></BIG> \n <b>
-            ================================\n\n1)  Android Architecture Components
+            _________________________________________\n\n1)  Android Architecture Components
         </b> \n\n<TT>Copyright © 2014 The Android Open Source Project, Inc.\n\nApache License 2.0\n\nLicensed under the Apache License, Version 2.0 (the "License");
                             you may not use this file except in compliance with the License.
                             You may obtain a copy of the License at\n\n
