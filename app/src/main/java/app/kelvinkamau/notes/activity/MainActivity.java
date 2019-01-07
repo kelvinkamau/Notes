@@ -1,24 +1,36 @@
 package app.kelvinkamau.notes.activity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import org.json.JSONArray;
 
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.Objects;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -44,7 +56,14 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
     public View drawerHolder;
     public Handler handler = new Handler();
     private DrawerLayout drawerLayout;
+    private ImageView account;
     private boolean exitStatus = false;
+
+    private GoogleSignInClient mGoogleSignInClient;
+    private static final String TAG = "Login";
+    private static final int RC_SIGN_IN = 9001;
+    private FirebaseAuth mAuth;
+
     public Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -65,7 +84,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
         toolbar = findViewById(R.id.toolbar);
+        account = findViewById(R.id.account);
         setSupportActionBar(toolbar);
+
+        mAuth = FirebaseAuth.getInstance();
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        mGoogleSignInClient = GoogleSignIn.getClient(MainActivity.this, gso);
 
         try {
             //noinspection ConstantConditions
@@ -96,6 +120,51 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
                 requestPermission();
             }
+        }
+
+        account.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signIn();
+            }
+        });
+    }
+
+    public void onStart() {
+        super.onStart();
+        FirebaseUser currentUser = mAuth.getCurrentUser();
+        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(MainActivity.this);
+
+    }
+
+    public void signIn() {
+        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
+        startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            handleSignInResult(task);
+        }
+    }
+
+    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
+        try {
+            GoogleSignInAccount acct = completedTask.getResult(ApiException.class);
+            if (completedTask.isSuccessful()) {
+                assert acct != null;
+                String name = acct.getDisplayName();
+                String imageUrl = String.valueOf(acct.getPhotoUrl());
+            }
+
+        } catch (ApiException e) {
+
+            Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
+
         }
     }
 
