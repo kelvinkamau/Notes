@@ -28,7 +28,7 @@ Notes
 - [x] Save note toast notification
 - [ ] Pin notes & category to top
 - [ ] Firebase storage
-- [ ] Google Authentication
+- [x] Google Authentication
 - [ ] Chrome browser extension
 - [ ] Date update on edit note
 - [ ] Trash activity

@@ -3,6 +3,8 @@ package app.kelvinkamau.notes.activity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.DrawableContainer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -11,9 +13,12 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.transition.Transition;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -24,14 +29,10 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
 import org.json.JSONArray;
-
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
-import java.util.Objects;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -154,11 +155,32 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
-            GoogleSignInAccount acct = completedTask.getResult(ApiException.class);
+            final GoogleSignInAccount acct = completedTask.getResult(ApiException.class);
             if (completedTask.isSuccessful()) {
                 assert acct != null;
-                String name = acct.getDisplayName();
+                //String name = acct.getDisplayName();
                 String imageUrl = String.valueOf(acct.getPhotoUrl());
+
+                Glide
+                        .with(this)
+                        .load(acct.getPhotoUrl())
+                        .apply(RequestOptions.circleCropTransform())
+                        .into(account);
+
+
+                /*Glide.with(this)
+                        .asBitmap()
+                        .load(acct.getPhotoUrl())
+                        .apply(RequestOptions.circleCropTransform())
+                        .into(new SimpleTarget<Drawable>(100, 100) {
+                            @Override
+                            public void onResourceReady(Drawable resource, Transition<? super Drawable> transition) {
+                                //profileItem.setIcon(new BitmapDrawable(getResources(), resource));
+                                account.setImageDrawable(new ImageView(), resource);
+                            }
+                        });*/
+
+
             }
 
         } catch (ApiException e) {
@@ -184,9 +206,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
             finish();
         } else {
             exitStatus = true;
-
             Snackbar.make(fragment.fab != null ? fragment.fab : toolbar, R.string.exit_message, Snackbar.LENGTH_LONG).show();
-
             handler.postDelayed(runnable, 3500);
         }
     }
