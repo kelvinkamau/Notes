@@ -2,7 +2,6 @@ package app.kelvinkamau.notes.model;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-
 import app.kelvinkamau.notes.R;
 import app.kelvinkamau.notes.db.Controller;
 import app.kelvinkamau.notes.db.OpenHelper;

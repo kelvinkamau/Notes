@@ -4,7 +4,6 @@ import android.app.Application;
 import android.content.SharedPreferences;
 import android.graphics.Point;
 import android.view.WindowManager;
-
 import app.kelvinkamau.notes.db.Controller;
 
 public class App extends Application {

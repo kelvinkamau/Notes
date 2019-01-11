@@ -3,8 +3,8 @@ package app.kelvinkamau.notes.activity;
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.DrawableContainer;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -65,6 +65,9 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
     private static final int RC_SIGN_IN = 9001;
     private FirebaseAuth mAuth;
 
+    private GoogleSignInAccount acct;
+    private String username;
+
     public Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -87,6 +90,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         toolbar = findViewById(R.id.toolbar);
         account = findViewById(R.id.account);
         setSupportActionBar(toolbar);
+
 
         mAuth = FirebaseAuth.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
@@ -135,7 +139,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(MainActivity.this);
-
     }
 
     public void signIn() {
@@ -146,7 +149,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
         if (requestCode == RC_SIGN_IN) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             handleSignInResult(task);
@@ -155,32 +157,20 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
 
     private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
         try {
-            final GoogleSignInAccount acct = completedTask.getResult(ApiException.class);
+            acct = completedTask.getResult(ApiException.class);
             if (completedTask.isSuccessful()) {
                 assert acct != null;
-                //String name = acct.getDisplayName();
-                String imageUrl = String.valueOf(acct.getPhotoUrl());
+                username = acct.getDisplayName();
+                loadImg();
 
+                /*
+                account.setMaxHeight(100);
+                account.setMaxWidth(100);
                 Glide
                         .with(this)
                         .load(acct.getPhotoUrl())
                         .apply(RequestOptions.circleCropTransform())
-                        .into(account);
-
-
-                /*Glide.with(this)
-                        .asBitmap()
-                        .load(acct.getPhotoUrl())
-                        .apply(RequestOptions.circleCropTransform())
-                        .into(new SimpleTarget<Drawable>(100, 100) {
-                            @Override
-                            public void onResourceReady(Drawable resource, Transition<? super Drawable> transition) {
-                                //profileItem.setIcon(new BitmapDrawable(getResources(), resource));
-                                account.setImageDrawable(new ImageView(), resource);
-                            }
-                        });*/
-
-
+                        .into(account);*/
             }
 
         } catch (ApiException e) {
@@ -188,6 +178,21 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
             Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
 
         }
+    }
+
+    public void loadImg() {
+        Glide.with(this)
+                .asBitmap()
+                .load(acct.getPhotoUrl())
+                .apply(RequestOptions.circleCropTransform())
+                .into(new SimpleTarget<Bitmap>(60, 60) {
+                    @Override
+                    public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
+                        account.setImageDrawable(new BitmapDrawable(getResources(), resource));
+                    }
+                });
+
+        Toast.makeText(this, username + ", you're successfully signed in.", Toast.LENGTH_SHORT).show();
     }
 
     @Override
