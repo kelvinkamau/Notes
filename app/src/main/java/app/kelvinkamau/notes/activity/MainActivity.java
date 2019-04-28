@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.bumptech.glide.Glide;
@@ -25,14 +26,18 @@ import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.analytics.FirebaseAnalytics;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+
 import org.json.JSONArray;
+
 import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -81,6 +86,11 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
     private boolean checkForPermission = true;
     private FirebaseAnalytics mFirebaseAnalytics;
 
+
+    /*todo sign out
+    firebaseAuth.signOut();
+    Auth.GoogleSignInApi.signOut(apiClient);
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,10 +101,10 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         account = findViewById(R.id.account);
         setSupportActionBar(toolbar);
 
-
         mAuth = FirebaseAuth.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
         mGoogleSignInClient = GoogleSignIn.getClient(MainActivity.this, gso);
+        int x = 1;
 
         try {
             //noinspection ConstantConditions
@@ -130,7 +140,19 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                signIn();
+
+                if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+                    //loadImg();
+                    new MaterialAlertDialogBuilder(MainActivity.this)
+                            .setTitle("Title")
+                            .setMessage("Message")
+                            .setPositiveButton("Ok", null)
+                            .show();
+
+                } else {
+                    signIn();
+                }
+
             }
         });
     }
@@ -160,21 +182,11 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
             acct = completedTask.getResult(ApiException.class);
             if (completedTask.isSuccessful()) {
                 assert acct != null;
-                username = acct.getDisplayName();
                 loadImg();
-
-                /*
-                account.setMaxHeight(100);
-                account.setMaxWidth(100);
-                Glide
-                        .with(this)
-                        .load(acct.getPhotoUrl())
-                        .apply(RequestOptions.circleCropTransform())
-                        .into(account);*/
             }
 
         } catch (ApiException e) {
-
+            Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show();
             Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
 
         }
@@ -185,14 +197,17 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                 .asBitmap()
                 .load(acct.getPhotoUrl())
                 .apply(RequestOptions.circleCropTransform())
-                .into(new SimpleTarget<Bitmap>(60, 60) {
+                .into(new SimpleTarget<Bitmap>(62, 62) {
+
+                    //todo check if user is authenticated  then loadImage
                     @Override
                     public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
                         account.setImageDrawable(new BitmapDrawable(getResources(), resource));
                     }
                 });
 
-        Toast.makeText(this, username + ", you're successfully signed in.", Toast.LENGTH_SHORT).show();
+        Snackbar.make(fragment.fab != null ? fragment.fab : toolbar, R.string.sync, 5000).show();
+
     }
 
     @Override

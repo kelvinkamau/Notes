@@ -9,6 +9,8 @@
     <string name="exit_message">Press again to exit</string>
     <string name="new_category">New category</string>
     <string name="empty">empty</string>
+    <string name="sync">Syncing your notes&#8230;</string>
+    <string name="sign_out">Sign Out</string>
     <string name="no_categories">Start by adding a category</string>
     <string name="notify_save">Your note will be automatically saved when you press the back button</string>
     <string name="no_notes">No notes here</string>
