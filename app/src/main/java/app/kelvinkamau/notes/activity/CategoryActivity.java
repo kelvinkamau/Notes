@@ -30,7 +30,6 @@ public class CategoryActivity extends AppCompatActivity implements RecyclerFragm
         setSupportActionBar(toolbar);
 
         try {
-            //noinspection ConstantConditions
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         } catch (Exception ignored) {
         }
