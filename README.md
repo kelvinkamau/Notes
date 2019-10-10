@@ -2,10 +2,6 @@ Notes
 =======
 **Notes** is a simple note taking app for Android.
 
-[![Kotlin](https://img.shields.io/badge/Kotlin-1.3.11-blue.svg?style=flat-square)](http://kotlinlang.org)
-[![AndroidX](https://img.shields.io/badge/AndroidX-1.0-6ab344.svg?style=flat-square)](https://github.com/ReactiveX/RxJava/releases/tag/v2.1.10)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/6eea62b87d8b4e54b49a3eb8bb33facb)](https://www.codacy.com?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=kelvinkamau/Notes&amp;utm_campaign=Badge_Grade)
-
 ## Get app on Google Play
 <a href="https://play.google.com/store/apps/details?id=app.kelvinkamau.notes"><img height="50px" src="https://github.com/kelvinkamau/Reminders/blob/master/screenshots/playstore.png"/></a> &nbsp;
 
