@@ -16,21 +16,8 @@ import android.widget.Toast;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
-import com.bumptech.glide.request.target.SimpleTarget;
-import com.bumptech.glide.request.transition.Transition;
-import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
-import com.google.android.gms.auth.api.signin.GoogleSignInClient;
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.tasks.Task;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.analytics.FirebaseAnalytics;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+
 
 import org.json.JSONArray;
 
@@ -64,15 +51,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
     private DrawerLayout drawerLayout;
     private ImageView account;
     private boolean exitStatus = false;
-
-    private GoogleSignInClient mGoogleSignInClient;
-    private static final String TAG = "Login";
-    private static final int RC_SIGN_IN = 9001;
-    private FirebaseAuth mAuth;
-
-    private GoogleSignInAccount acct;
-    private String username;
-
     public Runnable runnable = new Runnable() {
         @Override
         public void run() {
@@ -84,26 +62,24 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
     private View selectionEdit;
     private boolean permissionNotGranted = false;
     private boolean checkForPermission = true;
-    private FirebaseAnalytics mFirebaseAnalytics;
 
 
     /*todo sign out
     firebaseAuth.signOut();
     Auth.GoogleSignInApi.signOut(apiClient);
      */
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+
 
         toolbar = findViewById(R.id.toolbar);
         account = findViewById(R.id.account);
         setSupportActionBar(toolbar);
 
-        mAuth = FirebaseAuth.getInstance();
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
-        mGoogleSignInClient = GoogleSignIn.getClient(MainActivity.this, gso);
+
         int x = 1;
 
         try {
@@ -136,77 +112,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                 requestPermission();
             }
         }
-
-        account.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-                    //loadImg();
-                    new MaterialAlertDialogBuilder(MainActivity.this)
-                            .setTitle("Title")
-                            .setMessage("Message")
-                            .setPositiveButton("Ok", null)
-                            .show();
-
-                } else {
-                    signIn();
-                }
-
-            }
-        });
-    }
-
-    public void onStart() {
-        super.onStart();
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(MainActivity.this);
-    }
-
-    public void signIn() {
-        Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-        startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == RC_SIGN_IN) {
-            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
-            handleSignInResult(task);
-        }
-    }
-
-    private void handleSignInResult(Task<GoogleSignInAccount> completedTask) {
-        try {
-            acct = completedTask.getResult(ApiException.class);
-            if (completedTask.isSuccessful()) {
-                assert acct != null;
-                loadImg();
-            }
-
-        } catch (ApiException e) {
-            Toast.makeText(this, "Login failed", Toast.LENGTH_LONG).show();
-            Log.w(TAG, "signInResult:failed code=" + e.getStatusCode());
-
-        }
-    }
-
-    public void loadImg() {
-        Glide.with(this)
-                .asBitmap()
-                .load(acct.getPhotoUrl())
-                .apply(RequestOptions.circleCropTransform())
-                .into(new SimpleTarget<Bitmap>(62, 62) {
-
-                    //todo check if user is authenticated  then loadImage
-                    @Override
-                    public void onResourceReady(Bitmap resource, Transition<? super Bitmap> transition) {
-                        account.setImageDrawable(new BitmapDrawable(getResources(), resource));
-                    }
-                });
-
-        Snackbar.make(fragment.fab != null ? fragment.fab : toolbar, R.string.sync, 5000).show();
 
     }
 
