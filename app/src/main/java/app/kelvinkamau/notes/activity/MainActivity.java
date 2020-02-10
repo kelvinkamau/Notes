@@ -112,6 +112,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                 requestPermission();
             }
         }
+        onAuth();
 
     }
 
@@ -134,6 +135,16 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
             Snackbar.make(fragment.fab != null ? fragment.fab : toolbar, R.string.exit_message, Snackbar.LENGTH_LONG).show();
             handler.postDelayed(runnable, 3500);
         }
+    }
+
+    private void onAuth(){
+        ImageView auth = findViewById(R.id.account);
+        auth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Auth button clicked", Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void setupDrawer() {
