@@ -76,9 +76,7 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
 
 
         toolbar = findViewById(R.id.toolbar);
-        account = findViewById(R.id.account);
         setSupportActionBar(toolbar);
-
 
         int x = 1;
 
@@ -112,7 +110,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                 requestPermission();
             }
         }
-        onAuth();
 
     }
 
@@ -137,15 +134,6 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         }
     }
 
-    private void onAuth(){
-        ImageView auth = findViewById(R.id.account);
-        auth.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(), "Auth button clicked", Toast.LENGTH_LONG).show();
-            }
-        });
-    }
 
     private void setupDrawer() {
         // Set date in drawer
