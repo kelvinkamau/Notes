@@ -13,8 +13,6 @@ Notes
 
 ## Screenshots
 <img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/one.png"/> &nbsp;
-<img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/two.png"/> &nbsp;
-<img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/three.png"/> &nbsp;
 <img width="200px" src="https://github.com/kelvinkamau/Notes/blob/master/Screenshots/four.png"/>
 
 ## Milestones
@@ -24,7 +22,7 @@ Notes
 - [x] Save note toast notification
 - [ ] Pin notes & category to top
 - [ ] Firebase storage
-- [x] Google Authentication
+- [ ] Google Authentication
 - [ ] Chrome browser extension
 - [ ] Date update on edit note
 - [ ] Trash activity

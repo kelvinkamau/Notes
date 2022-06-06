@@ -8,6 +8,7 @@
         android:layout_centerVertical="true"
         android:layout_height="1dp"
         android:layout_marginStart="20dp"
-        android:background="@color/splitter" />
+        android:background="@color/splitter"
+        android:layout_marginLeft="20dp" />
 
 </RelativeLayout>
