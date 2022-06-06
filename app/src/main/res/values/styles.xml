@@ -5,7 +5,7 @@
         <attr name="emptyIcon" format="reference" />
     </declare-styleable>
 
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/main_color</item>
         <item name="colorPrimaryDark">@color/main_color_dark</item>
         <item name="colorAccent">@color/main_color</item>

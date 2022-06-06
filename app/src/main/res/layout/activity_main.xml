@@ -44,17 +44,6 @@
                 android:textSize="@dimen/large_text" />
 
 
-            <ImageView
-                android:id="@+id/account"
-                android:layout_width="@dimen/toolbar_height"
-                android:layout_height="@dimen/toolbar_height"
-                android:layout_gravity="end|top"
-                android:background="@drawable/ripple_circle"
-                android:clickable="true"
-                android:contentDescription="@string/menu"
-                android:scaleType="center"
-                app:srcCompat="@drawable/account"
-                tools:ignore="MissingPrefix" />
         </androidx.appcompat.widget.Toolbar>
 
         <androidx.appcompat.widget.Toolbar
